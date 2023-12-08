@@ -1,29 +1,87 @@
-# FocusHelper
-Purpose
-When using a latop for studying or work, focusing is too hard to keep. In addition, my posture may unknowingly worsen and turtle neck syndrome makes my shoulder painful. To solve this problem, I start this project.
+#ImprovingPoseOnPC
+Users who frequently use a PC often unconsciously tilt their heads towards the monitor, leading to poor posture. Additionally, maintaining a healthy posture while using the keyboard can be challenging. To address these issues and prevent the development of various unhealthy habits, a program has been devised.
 
-Plan to use
+##Objectives
+1. Prevention of "Turtle Neck" posture.
+2. Ensuring an optimal distance between the monitor and eyes.
+3. Prevention of eye dryness.
+4. Muscle stretching exercises.
+5. Enhancement of concentration.
+6. To be determined.
+
+#Resources Used
+* OpenCV
+* Mediapipe
+* Python
+* CVZone
+
+<sub>This sentences are translated with chatGPT 3.5</sub>
+
+----
+
+#PC사용할 때의 자세를 개선시키는데에 도움을 주는 프로그램
+PC를 자주 사용하는 사용자들은 무의식적으로 고개를 모니터로 기울게된다. 또한 키보드를 사용하기 위해 자세가 망가지기 쉽다.
+이 외에도 다양한 안 좋은 습관들이 몸에 새겨지는 것을 막거나 억제해보고자 기획했다.
+
+
+
+##목표
+1. 거북목 방지
+	- 모니터를 보다보면 우리는 빈번하게 목을 앞으로 하여 모니터와 가까워진다. 이러한 자세가 습관이 되면, 우리는 거북목을 가지게 된다. 거북목 증후군은 목에 관절염을 유발하고, 호흡에 지장을 주며, 심한 두통에 시달리게 한다. 또한 뒷목, 어깨, 허리 등에도 통증을 유발시킨다.
+2. 안구건조증 방지
+	- 우리가 모니터를 오랫동안 본다면, 자연스럽게 눈의 깜빡임이 적어진다. 적어진 깜빡임은 눈을 건조하게 하며, 안구 표면 손상을 유발한다. 안구건조증이 심해지면, 눈에서 다양한 통증을 유발한다.
+3. 근육 스트레칭
+	- PC앞에서 우리는 시간의 흐름을 느끼기 힘들다. 장시간 똑같은 자세를 유지하는 것은 몸의 근육에 상당한 부담을 주기 때문에 우리는 일정 시간마다 근육을 스트레칭해줘야한다.
+4. 미정
+	- 웹캠을 통해 우리의 자세와 태도를 개선시킬 수 있는 다른 목표와 방법을 계속 생각하고 있다.
+
+
+##사용한 리소스
 OpenCV
 Mediapipe
 Python
+CVZone
 
-At first, take a picture of standard posture.
-Measure distance between face and display for preventing turtle neck syndrome. If face is too close to display, warning alarm works.
-Trace movement of upper body to prevent muscle distortion and stiffness.
-Identify eyes to check if you focus on your work or not. If hard to focus, this would recommend taking rest.
-This would measure attention span and help you focus longer than before.
 
------------------------------------------------------------------------------------------------------------------------------------------
 
-랩탑을 이용하여 공부나 일을 할 때, 집중을 못 할 수 있다. 그리고 자신도 모르게 자세가 나빠지며 거북목 증상을 일으킬 수 있다. 이러한 문제를 해결하고자 이 프로젝트를 시작했다.
+##구현 방식
 
-사용할 것
-OpenCV
-Mediapipe
-Python
+### 1. 거북목 방지
+거북목은 목이 구부정하게 앞으로 나오는 자세를 장기간 취할 경우 생기게 된다. 이를 방지하는 방법은 모니터의 웹캠과 머리, 몸 사이의 거리의 차가 일정 수준 이상을 벗어날 경우 경고를 주는 것이다.
+	- 웹캠과 머리 사이의 거리를 구하는 방법: 두 홍채 사이의 거리는 일정하다는 사실을 이용할 것이다. 실제 홍채 사이의 거리와 특정 위치에서의 웹캠에서의 홍채 사이의 거리를 이용하여 눈과 카메라 사이의 거리를 구할 수 있다.
+	- 웹캠과 몸 사이의 거리를 구하는 방법: 우리가 pc를 사용할 때에는 웹캠과 몸을 평행하게 위치시킨다. 이를 통해 실제 어깨 사이의 거리, 특정 위치에서의 웹캠에서의 어개 사이의 거리를 이용하여 몸과 카메라 사이의 거리를 구할 수 있다.
 
-최초의 바른 자세를 찍어 기준으로 삼는다.
-거북목과 시력 악화를 방지하기 위해 카메라와 얼굴 사이의 거리를 측정하여 일정 거리 이내로 들어올 경우 경고 알림을 울린다.
-상체의 움직임을 추적하여 상체 근육의 비틀림과 굳음을 방지한다.
-눈의 움직임을 확인하여 집중하는지에 대한 여부를 확인하며, 일정 시간 내에 집중 이탈이 빈번한 경우 휴식을 권고한다.
-집중 시간을 측정하여, 사용자의 집중력 향상을 도와준다.
+### 2. 안구건조증 방지
+적절한 눈 깜빡임은 분당 15~20회이다.
+Mediapipe의 FaceLandmark는 눈의 경계를 추적하기 때문에 이를 이용하여 눈의 깜빡임을 측정할 수 있다.
+
+### 3. 근육 스트레칭
+얼굴이 특정 시간 이상 웹캠에 비춰진다면, 그 사람이 PC앞에서 장기간 앉아 있다는 뜻이다. 특정 시간이 지나면 경고 알람을 띄워 스트레칭을 유도할 수 있다.
+
+### 4. 미정
+
+
+
+##라이선스
+MIT License
+Copyright (c) <2023> <PBirdDragon>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+<sub>from wikipedia</sub>
