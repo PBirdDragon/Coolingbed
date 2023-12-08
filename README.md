@@ -1,21 +1,22 @@
-#ImprovingPoseOnPC
+# ImprovingPoseOnPC
+
 Users who frequently use a PC often unconsciously tilt their heads towards the monitor, leading to poor posture. Additionally, maintaining a healthy posture while using the keyboard can be challenging. To address these issues and prevent the development of various unhealthy habits, a program has been devised.
 
-##Objectives
+## Objectives
 1. Prevention of "Turtle Neck" posture.
 2. Prevention of eye dryness.
 3. Muscle stretching exercises.
 4. To be determined.
 
 
-##Resources Used
+## Resources Used
 * OpenCV
 * Mediapipe
 * Python
 * CVZone
 
 
-##How to make
+## How to make
 
 ### 1. Prevention of "Turtle Neck" posture.
 "Turtle neck," or forward head posture, develops when a person maintains a hunched position for an extended period. One method to prevent this is by using a webcam to issue warnings when the distance between the monitor, webcam, head, and body exceeds a certain threshold.
@@ -35,7 +36,7 @@ If a person's face is illuminated by the webcam for an extended period, it impli
 To be continued...
 
 
-##License
+## License
 MIT License
 Copyright (c) <2023> <PBirdDragon>
 
@@ -63,13 +64,13 @@ SOFTWARE.
 
 ----
 
-#PC사용할 때의 자세를 개선시키는데에 도움을 주는 프로그램
+# PC사용할 때의 자세를 개선시키는데에 도움을 주는 프로그램
 PC를 자주 사용하는 사용자들은 무의식적으로 고개를 모니터로 기울게된다. 또한 키보드를 사용하기 위해 자세가 망가지기 쉽다.
 이 외에도 다양한 안 좋은 습관들이 몸에 새겨지는 것을 막거나 억제해보고자 기획했다.
 
 
 
-##목표
+## 목표
 1. 거북목 방지
 	- 모니터를 보다보면 우리는 빈번하게 목을 앞으로 하여 모니터와 가까워진다. 이러한 자세가 습관이 되면, 우리는 거북목을 가지게 된다. 거북목 증후군은 목에 관절염을 유발하고, 호흡에 지장을 주며, 심한 두통에 시달리게 한다. 또한 뒷목, 어깨, 허리 등에도 통증을 유발시킨다.
 2. 안구건조증 방지
@@ -80,7 +81,7 @@ PC를 자주 사용하는 사용자들은 무의식적으로 고개를 모니터
 	- 웹캠을 통해 우리의 자세와 태도를 개선시킬 수 있는 다른 목표와 방법을 계속 생각하고 있다.
 
 
-##사용한 리소스
+## 사용한 리소스
 OpenCV
 Mediapipe
 Python
@@ -88,7 +89,7 @@ CVZone
 
 
 
-##구현 방식
+## 구현 방식
 
 ### 1. 거북목 방지
 거북목은 목이 구부정하게 앞으로 나오는 자세를 장기간 취할 경우 생기게 된다. 이를 방지하는 방법은 모니터의 웹캠과 머리, 몸 사이의 거리의 차가 일정 수준 이상을 벗어날 경우 경고를 주는 것이다.
@@ -106,7 +107,7 @@ Mediapipe의 FaceLandmark는 눈의 경계를 추적하기 때문에 이를 이�
 
 
 
-##라이선스
+## 라이선스
 MIT License
 Copyright (c) <2023> <PBirdDragon>
 
