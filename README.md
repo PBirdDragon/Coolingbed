@@ -3,17 +3,61 @@ Users who frequently use a PC often unconsciously tilt their heads towards the m
 
 ##Objectives
 1. Prevention of "Turtle Neck" posture.
-2. Ensuring an optimal distance between the monitor and eyes.
-3. Prevention of eye dryness.
-4. Muscle stretching exercises.
-5. Enhancement of concentration.
-6. To be determined.
+2. Prevention of eye dryness.
+3. Muscle stretching exercises.
+4. To be determined.
 
-#Resources Used
+
+##Resources Used
 * OpenCV
 * Mediapipe
 * Python
 * CVZone
+
+
+##How to make
+
+### 1. Prevention of "Turtle Neck" posture.
+"Turtle neck," or forward head posture, develops when a person maintains a hunched position for an extended period. One method to prevent this is by using a webcam to issue warnings when the distance between the monitor, webcam, head, and body exceeds a certain threshold.
+	- How to measure the distance between the webcam and the head: Utilize the fact that the distance between the irises remains constant. By comparing the actual distance between the irises to the distance captured by the webcam at a specific position, you can calculate the distance between the eyes and the camera.
+	- How to measure the distance between the webcam and the body: When using a PC, the webcam and body are generally parallel. By leveraging this, you can determine the distance between the shoulders by comparing the actual shoulder width to the distance between shoulder points captured by the webcam at a specific position, allowing you to calculate the distance between the body and the camera.
+
+
+### 2. Prevention of eye dryness.
+An appropriate blink rate is around 15 to 20 times per minute.
+Utilizing Mediapipe's FaceLandmark, which tracks the boundaries of the eyes, enables the measurement of blink frequency.
+
+
+### 3. Muscle stretching exercises.
+If a person's face is illuminated by the webcam for an extended period, it implies that the individual has been sitting in front of the PC for a prolonged duration. After a specific period, triggering a warning alert can encourage stretching to promote better posture.
+
+### 4. To be determined.
+To be continued...
+
+
+##License
+MIT License
+Copyright (c) <2023> <PBirdDragon>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+<sub>from wikipedia</sub>
 
 <sub>This sentences are translated with chatGPT 3.5</sub>
 
