@@ -100,7 +100,7 @@ PC를 자주 사용하는 사용자들은 무의식적으로 고개를 모니터
 
 |목을 넣은 상태|목을 뺀 상태|
 |---|---|
-|<img src="turtle_no.png" width = "200">|<img src="turtle_yes.png" width = "200">|
+|<img src="turtle_no.png" width = "400">|<img src="turtle_yes.png" width = "400">|
 
 
 ### 2. 안구건조증 방지 (미구현)
